@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <style>
         .container{
 border: 2px solid aliceblue;
@@ -21,7 +22,10 @@ border: 2px solid aliceblue;
     border-radius: 60px;
         }
         .textcontainer{
-            display: flex;
+               display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
         }
         .label{
             margin: 10px;
@@ -32,7 +36,7 @@ border: 2px solid aliceblue;
         .loginbutton{
                 background-color: brown;
     height: 40px;
-    /* width: 72px; */
+width: 72px;
     border: 1px solid;
     border-radius: 20px;
         }
@@ -41,11 +45,26 @@ border: 2px solid aliceblue;
         <h1 class="loginLogo"> Login </h1>
         <div class="textcontainer">
             <span class="label">Username</span> 
-            <input type="text" class="textInpyt" />
+            <input type="text" class="textInpyt" id="username" />
             <span class="label"></label>password</span>
             <input type="password" class="textInpyt"/>
-            <button class="loginbutton"> login </button>
+            <button class="loginbutton" onclick="validateUserName()"> login </button>
         </div>
     </div>
+        <script>
+            
+            function validateUserName(){
+                let name = "parvez";
+                let pass = "password"
+                let username = document.getElementById("username").value;
+                console.log("this is the value", username)
+                if(username.includes("parvez")){
+                    alert("valid user Name")
+                }
+                    else{
+                        alert("the username should have parvez in it");
+                    }
+            }
+        </script>
 </body>
 </html>
