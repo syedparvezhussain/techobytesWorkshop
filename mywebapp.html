@@ -6,8 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> My heading </h1>
-    <div> my web page</div>
-    <div> to show the second commit</div>
+    <style>
+        .container{
+border: 2px solid aliceblue;
+
+        }
+        .loginLogo{
+                color: red;
+    font-size: xxx-large;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    padding: 13px;
+    border-radius: 60px;
+        }
+        .textcontainer{
+            display: flex;
+        }
+        .label{
+            margin: 10px;
+        }
+        .textInpyt{
+            margin: 10px;
+        }
+        .loginbutton{
+                background-color: brown;
+    height: 40px;
+    /* width: 72px; */
+    border: 1px solid;
+    border-radius: 20px;
+        }
+    </style>
+    <div class="container">
+        <h1 class="loginLogo"> Login </h1>
+        <div class="textcontainer">
+            <span class="label">Username</span> 
+            <input type="text" class="textInpyt" />
+            <span class="label"></label>password</span>
+            <input type="password" class="textInpyt"/>
+            <button class="loginbutton"> login </button>
+        </div>
+    </div>
 </body>
 </html>
